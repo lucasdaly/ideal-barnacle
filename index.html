@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>My First Webpage</title>
+
+    <script>
+
+        // Generates random colour in hex format #XXXXXX
+        function randomColour() {
+
+            // Returns random hex colour string (no #)
+            return Math.floor(Math.random() * 16777215).toString(16);
+
+        }
+
+        function toHex(colour) {
+
+            return '#' + colour;
+
+        }
+
+        // Generates the complement of a given hex colour
+        function complementColour(colour) {
+
+            let R = parseInt(colour.substring(0, 2), 16);
+            let G = parseInt(colour.substring(2, 4), 16);
+            let B = parseInt(colour.substring(4, 6), 16);
+
+            let newR = 255 - R;
+            let newG = 255 - G;
+            let newB = 255 - B;
+
+            let newColour = newR.toString(16).padStart(2, '0') + newG.toString(16).padStart(2, '0') + newB.toString(16).padStart(2, '0');
+
+            return newColour.toUpperCase();
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div style="display: flex">
+
+
+    <!-- Left Colour box-->
+    <div>
+
+    </div>
+
+    <!-- Right Colour box-->
+    <div>
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
 
