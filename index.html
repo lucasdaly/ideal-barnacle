@@ -43,6 +43,24 @@
 
         function changeColourBoxes() {
 
+            let newColour = randomColour();
+            let complementaryColour = complementColour(newColour);
+
+            newColour = toHex(newColour);
+            complementaryColour = toHex(complementaryColour);
+
+
+            document.getElementById("leftHexCode").innerHTML = newColour;
+            document.getElementById("RightHexCode").innerHTML = complementaryColour;
+
+            document.getElementById("leftBox").style.background = newColour
+            document.getElementById("rightBox").style.background = complementaryColour;
+
+            document.getElementById("leftHexCode").style.color = complementaryColour;
+            document.getElementById("RightHexCode").style.color = newColour;
+
+
+
 
 
 
@@ -52,11 +70,7 @@
 
 </head>
 
-<body>
-
-<button>
-    click me
-</button>
+<body onkeypress="changeColourBoxes()">
 
 <div style="display: flex">
 
@@ -65,7 +79,8 @@
     <div
             class="colourBox"
             id="leftBox">
-        f
+
+        <h1><span id="leftHexCode">e</span></h1>
 
     </div>
 
@@ -74,7 +89,9 @@
             class="colourBox"
             id="rightBox">
 
-        <span id="test">sdfsdfs</span>
+        <h1 ><span id="RightHexCode">e</span></h1>
+
+
     </div>
 
 
